@@ -1,0 +1,132 @@
+.animation-block  {    
+    margin: 30px auto;
+    width: 300px;
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+    background: midnightblue;
+}
+.waves{
+    background: lightseagreen;
+    height: 80px;
+    width: 120%;
+    position: absolute;
+    bottom: -20px;
+    left: -20%;
+    z-index:2;
+    animation: waves 2s linear alternate infinite;
+}
+
+.wave {
+ width: 25%;
+ height: 30px;
+ border-radius: 50%;
+ background: lightseagreen;
+ margin-top: -12px;
+ float: left;
+}
+
+@keyframes waves{
+    0%{transform: translate(0,0);}
+    50%{transform: translate(20px,-10px);}
+   100%{transform: translate(40,0);}
+}
+.boat{
+    width: 200px;
+    height: 40px;
+    background: brown;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    z-index:1;
+    animation: boat 2s linear alternate infinite;
+}
+@keyframes boat{
+    0%{transform: rotate(-3deg);}
+    50%{transform: rotate(0deg);}
+   100%{transform: rotate(3deg);}
+}
+.star{
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #fff;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 1);
+}
+@keyframes star{
+    0%{transform: scale(1);}
+    100%{transform: scale(1.5);}
+}
+
+.st1{top: 10%;left: 10%;}
+.st2{top: 15%;left: 25%;}
+.st3{top: 12%;left: 40%;}
+.st4{top: 8%;left: 65%;}
+.st5{top:11%;left: 80%;}
+.st6{top: 20%;left: 22%;}
+.st7{top: 18%;left: 55%;}
+.st8{top: 21%;left: 70%;}
+.st9{top: 16%;left: 7%;}
+.st10{top: 19%;left: 90%;}
+
+
+   /* animation-name: star;
+   animation-interation-count: infinite;
+   animation-direction: alternate; */
+
+.anim1{
+    animation-duration: 1s;
+}
+.anim2{
+    animation-duration: 1.5s;
+}
+.anim3{
+    animation-duration: 2s;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Выпадающее меню!!!!/style.css">
+</head>
+<body>
+  
+
+<div class="container">
+    <div class="animation-block">   
+        <div class="star st1 anim1"></div>   
+        <div class="star st2 anim3"></div>
+        <div class="star st3 anim1"></div>
+        <div class="star st4 anim2"></div>
+        <div class="star st5 anim3"></div>
+        <div class="star st6 anim1"></div>
+        <div class="star st7 anim2"></div>
+        <div class="star st8 anim3"></div>
+        <div class="star st9 anim2"></div>
+        <div class="star st10 anim1"></div>
+        <div class="waves">   
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+        <div class="boat"></div>   
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
